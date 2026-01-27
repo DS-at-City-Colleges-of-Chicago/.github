@@ -1,26 +1,8 @@
-# 🏢 Your Organization
+<!-- "Hero" Header -->
+<div align="center">
+  <img src="https://github.com/DS-at-City-Colleges-of-Chicago/.github/blob/main/images/WelcometotheDecisionSupportProfile-WelcometotheDec.png" style="max-width: 100%;" alt="Welcome to my Github Profile" />
+  <br />
+  <br />
+  <br />
 
-> Private engineering organization
-
----
-
-## 👥 Team
-
-**Total Members:** **<!-- MEMBER_COUNT -->**
-
-<!-- MEMBERS_LIST_START -->
-- Loading members...
-<!-- MEMBERS_LIST_END -->
-
----
-
-## 🔀 Pull Requests (All Repositories)
-
-| Status | Count |
-|------|------|
-| 🟡 Open PRs | **<!-- OPEN_PR_COUNT -->** |
-| 🟢 Merged PRs | **<!-- MERGED_PR_COUNT -->** |
-
----
-
-_Last updated automatically._
+</div>
