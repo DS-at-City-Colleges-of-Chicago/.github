@@ -5,22 +5,41 @@ on:
     - cron: "0 0 * * *"
   workflow_dispatch:
 
+permissions:
+  pull-requests: read
+  contents: write
+
 jobs:
   prs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
-      - name: Count merged PRs
+      - name: Count PRs
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          COUNT=$(gh pr list --repo YOUR_ORG_NAME/YOUR_REPO --state merged --limit 1000 | wc -l)
-          perl -0777 -i -pe "s/<!-- MERGED_PR_COUNT -->/$COUNT/" profile/README.md
+          ORG=${{ github.repository_owner }}
+
+          OPEN=$(gh api search/issues \
+            -f q="org:$ORG is:pr is:open" \
+            --paginate | jq '.items | length')
+
+          MERGED=$(gh api search/issues \
+            -f q="org:$ORG is:pr is:merged" \
+            --paginate | jq '.items | length')
+
+          echo "OPEN=$OPEN" >> $GITHUB_ENV
+          echo "MERGED=$MERGED" >> $GITHUB_ENV
+
+      - name: Update README
+        run: |
+          perl -0777 -i -pe "s/\\*\\*<!-- OPEN_PR_COUNT -->\\*\\*/\\*\\*$OPEN\\*\\*/" profile/README.md
+          perl -0777 -i -pe "s/\\*\\*<!-- MERGED_PR_COUNT -->\\*\\*/\\*\\*$MERGED\\*\\*/" profile/README.md
 
       - name: Commit changes
         run: |
-          git config user.name "github-actions"
-          git config user.email "github-actions@github.com"
-          git commit -am "Update merged PR count" || exit 0
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git commit -am "Update PR stats" || exit 0
           git push
