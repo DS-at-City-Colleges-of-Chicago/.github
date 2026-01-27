@@ -1,0 +1,26 @@
+name: Update PR Stats
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:
+
+jobs:
+  prs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Count merged PRs
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          COUNT=$(gh pr list --repo YOUR_ORG_NAME/YOUR_REPO --state merged --limit 1000 | wc -l)
+          perl -0777 -i -pe "s/<!-- MERGED_PR_COUNT -->/$COUNT/" profile/README.md
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git commit -am "Update merged PR count" || exit 0
+          git push
