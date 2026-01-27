@@ -1,26 +1,41 @@
-# 🏢 Your Organization
+name: Update Members
 
-> Private engineering organization
+on:
+  schedule:
+    - cron: "0 0 * * *"
+  workflow_dispatch:
 
----
+permissions:
+  members: read
+  contents: write
 
-## 👥 Team
+jobs:
+  members:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
 
-**Total Members:** **<!-- MEMBER_COUNT -->**
+      - name: Fetch org members
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          MEMBERS=$(gh api orgs/${{ github.repository_owner }}/members --paginate | jq -r '.[].login')
+          COUNT=$(echo "$MEMBERS" | wc -l)
 
-<!-- MEMBERS_LIST_START -->
-- Loading members...
-<!-- MEMBERS_LIST_END -->
+          echo "$MEMBERS" > members.txt
+          echo "$COUNT" > member_count.txt
 
----
+      - name: Update README
+        run: |
+          LIST=$(cat members.txt | sed 's/^/- @/')
+          COUNT=$(cat member_count.txt)
 
-## 🔀 Pull Requests (All Repositories)
+          perl -0777 -i -pe "s/\\*\\*<!-- MEMBER_COUNT -->\\*\\*/\\*\\*$COUNT\\*\\*/" profile/README.md
+          perl -0777 -i -pe "s/<!-- MEMBERS_LIST_START -->.*<!-- MEMBERS_LIST_END -->/<!-- MEMBERS_LIST_START -->\n$LIST\n<!-- MEMBERS_LIST_END -->/s" profile/README.md
 
-| Status | Count |
-|------|------|
-| 🟡 Open PRs | **<!-- OPEN_PR_COUNT -->** |
-| 🟢 Merged PRs | **<!-- MERGED_PR_COUNT -->** |
-
----
-
-_Last updated automatically._
+      - name: Commit changes
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git commit -am "Update members" || exit 0
+          git push
