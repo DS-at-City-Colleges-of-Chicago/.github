@@ -1,29 +1,26 @@
-name: Update Members List
+# 🏢 Your Organization
 
-on:
-  schedule:
-    - cron: "0 0 * * *"
-  workflow_dispatch:
+> Private engineering organization
 
-jobs:
-  update:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
+---
 
-      - name: Fetch members
-        run: |
-          MEMBERS=$(curl -s https://api.github.com/orgs/YOUR_ORG_NAME/public_members | jq -r '.[].login')
-          echo "$MEMBERS" > members.txt
+## 👥 Team
 
-      - name: Update README
-        run: |
-          LIST=$(cat members.txt | sed 's/^/- @/')
-          perl -0777 -i -pe "s/<!-- MEMBERS_LIST_START -->.*<!-- MEMBERS_LIST_END -->/<!-- MEMBERS_LIST_START -->\n$LIST\n<!-- MEMBERS_LIST_END -->/s" profile/README.md
+**Total Members:** **<!-- MEMBER_COUNT -->**
 
-      - name: Commit changes
-        run: |
-          git config user.name "github-actions"
-          git config user.email "github-actions@github.com"
-          git commit -am "Update members list" || exit 0
-          git push
+<!-- MEMBERS_LIST_START -->
+- Loading members...
+<!-- MEMBERS_LIST_END -->
+
+---
+
+## 🔀 Pull Requests (All Repositories)
+
+| Status | Count |
+|------|------|
+| 🟡 Open PRs | **<!-- OPEN_PR_COUNT -->** |
+| 🟢 Merged PRs | **<!-- MERGED_PR_COUNT -->** |
+
+---
+
+_Last updated automatically._
