@@ -51,7 +51,7 @@ This structure helps ensure that Decision Support analyses are accurate, consist
 ## Quick Links
  📦 Repositories: https://github.com/orgs/DS-at-City-Colleges-of-Chicago/repositories
  <br />
- 🔀 Pull Requests: https://github.com/orgs/DS-at-City-Colleges-of-Chicago/pulls
+ 🔀 Open Pull Requests: https://github.com/pulls?q=is%3Aopen+is%3Apr+archived%3Afalse+user%3ADS-at-City-Colleges-of-Chicago
  <br />
  📝 Code Annotation Expectations: https://DS_CODE_EXPECTATIONS.ccc.edu _(Fake Link)_
  <br />
