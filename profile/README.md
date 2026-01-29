@@ -24,9 +24,9 @@ This structure helps ensure that Decision Support analyses are accurate, consist
 </div>
 
 ## Quick Links
- 📦 Repositories: https://github.com/acme-corp/api-service
+ 📦 Repositories: https://github.com/orgs/DS-at-City-Colleges-of-Chicago/repositories
  <br />
- 🔀 Pull Requests:  https://github.com/acme-corp/api-service/pulls
+ 🔀 Pull Requests: https://github.com/orgs/DS-at-City-Colleges-of-Chicago/pulls
  <br />
  🔰 Basic Introduction to Github: https://www.w3schools.com/git/git_intro.asp?remote=github
 
