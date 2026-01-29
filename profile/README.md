@@ -21,19 +21,39 @@ It is used to:
 
 This structure helps ensure that Decision Support analyses are accurate, consistent, and reliable, while reducing duplicated effort and preserving institutional knowledge.
 
-## Introduction Video
-</div>
-  <img
-    src="https://github.com/DS-at-City-Colleges-of-Chicago/.github/blob/main/images/blank%20embedded%20video.png?raw=true"
-    alt="This will be a real training video"
-    width="35%"
-  />
-</div>
+## Tutorials
+<table>
+  <tr>
+    <th align="center">Pull Requests Walkthrough</th>
+    <th align="center">Repository Structure Walkthrough</th>
+  </tr>
+  <tr>
+    <td align="center">
+      <img
+        src="https://github.com/DS-at-City-Colleges-of-Chicago/.github/blob/main/images/blank%20embedded%20video.png?raw=true"
+        alt="Pull request training video"
+        width="100%"
+        height="220"
+      />
+    </td>
+    <td align="center">
+      <img
+        src="https://github.com/DS-at-City-Colleges-of-Chicago/.github/blob/main/images/blank%20embedded%20video.png?raw=true"
+        alt="Uploading training video"
+        width="100%"
+        height="300"
+      />
+    </td>
+  </tr>
+</table>
+
 
 ## Quick Links
  📦 Repositories: https://github.com/orgs/DS-at-City-Colleges-of-Chicago/repositories
  <br />
  🔀 Pull Requests: https://github.com/orgs/DS-at-City-Colleges-of-Chicago/pulls
+ <br />
+ 📝 Code Annotation Expectations: https://DS_CODE_EXPECTATIONS.ccc.edu _(Fake Link)_
  <br />
  🔰 Basic Introduction to Github: https://www.w3schools.com/git/git_intro.asp?remote=github
 
