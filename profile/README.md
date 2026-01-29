@@ -15,7 +15,7 @@ It is used to:
 
 - Validate code through peer review before results are shared
 - Organize SQL and analysis code so it is easy to find, understand, and reuse
-- Apply consistent naming and documentation standards
+- Apply consistent documentation standards
 - Support collaboration across college-level teams and the District Office
 - Track changes over time to support transparency, reproducibility, and accountability
 
