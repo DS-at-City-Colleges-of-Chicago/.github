@@ -1,6 +1,6 @@
 <!-- "Hero" Header -->
 <div align="center">
-  <img src="https://github.com/DS-at-City-Colleges-of-Chicago/.github/blob/main/images/WelcometotheDecisionSupportProfile-WelcometotheDec.png" style="max-width: 100%;" alt="Welcome to my Github Profile" />
+  <img src="https://github.com/DS-at-City-Colleges-of-Chicago/.github/blob/main/images/WelcometotheDecisionSupportProfile-WelcometotheDec.png" style="max-width: 100%;" alt="Welcome to my Decision Support's GitHub site" />
   <br />
   <br />
   <br />
@@ -21,6 +21,13 @@ It is used to:
 
 This structure helps ensure that Decision Support analyses are accurate, consistent, and reliable, while reducing duplicated effort and preserving institutional knowledge.
 
+## Introduction Video
+</div>
+  <img
+    src="https://github.com/DS-at-City-Colleges-of-Chicago/.github/blob/main/images/blank%20embedded%20video.png?raw=true"
+    alt="This will be a real training video"
+    width="35%"
+  />
 </div>
 
 ## Quick Links
