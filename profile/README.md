@@ -21,7 +21,8 @@ It is used to:
 
 This structure helps ensure that Decision Support analyses are accurate, consistent, and reliable, while reducing duplicated effort and preserving institutional knowledge.
 
-## Tutorials
+
+## Organizational GitHub Tutorials
 <table>
   <tr>
     <th align="center">Pull Requests Walkthrough</th>
@@ -48,12 +49,17 @@ This structure helps ensure that Decision Support analyses are accurate, consist
 </table>
 
 
+## Annotation Expectations
+ <img
+        src="https://github.com/DS-at-City-Colleges-of-Chicago/.github/blob/main/images/How%20to%20Annotate%20-%20Image.png"
+        alt="Uploading training video"
+        width="90%"
+        height="800"
+      />
 ## Quick Links
  📦 Repositories: https://github.com/orgs/DS-at-City-Colleges-of-Chicago/repositories
  <br />
  🔀 Open Pull Requests: https://github.com/pulls?q=is%3Aopen+is%3Apr+archived%3Afalse+user%3ADS-at-City-Colleges-of-Chicago
- <br />
- 📝 Code Annotation Expectations: https://DS_CODE_EXPECTATIONS.ccc.edu _(Fake Link)_
  <br />
  🔰 Basic Introduction to Github: https://www.w3schools.com/git/git_intro.asp?remote=github
 
