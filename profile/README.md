@@ -34,10 +34,16 @@ This structure helps ensure that Decision Support analyses are accurate, consist
       </sub>
     </th>
     <th align="center">
-      Navigating GitHub Repositories<br>
-      <sub>Text Walkthrough</sub>
+      Responding to Pull Requests<br>
+       <sub>
+        <a href="https://github.com/DS-at-City-Colleges-of-Chicago/.github/blob/main/images/Responding%20to%20a%20Pull%20Request%20(PR)%20Walkthrough.pdf">
+          Text Walkthrough
+        </a>
+      </sub>
     </th>
   </tr>
+  
+
 
   <tr>
     <td align="center">
