@@ -25,9 +25,20 @@ This structure helps ensure that Decision Support analyses are accurate, consist
 ## Organizational GitHub Tutorials
 <table>
   <tr>
-    <th align="center">Pull Requests Walkthrough</th>
-    <th align="center">Repository Structure Walkthrough</th>
+    <th align="center">
+      Submitting Pull Requests<br>
+      <sub>
+        <a href="https://github.com/DS-at-City-Colleges-of-Chicago/.github/blob/main/images/GitHub%20Pull%20Request%20Walkthrough.pdf">
+          Text Walkthrough
+        </a>
+      </sub>
+    </th>
+    <th align="center">
+      Navigating GitHub Repositories<br>
+      <sub>Text Walkthrough</sub>
+    </th>
   </tr>
+
   <tr>
     <td align="center">
       <img
